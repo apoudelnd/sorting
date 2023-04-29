@@ -34,13 +34,14 @@ int main() {
 
     // sort the array using bubble sort
     bubbleSort(arr, n);
+    printf("done")
 
     // print the sorted array
-    printf("Sorted array: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    // printf("Sorted array: ");
+    // for (int i = 0; i < n; i++) {
+    //     printf("%d ", arr[i]);
+    // }
+    // printf("\n");
 
     return 0;
 }

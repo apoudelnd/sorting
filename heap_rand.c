@@ -51,13 +51,13 @@ int main() {
 
     // sort the array using heap sort
     heapSort(arr, n);
-
-    // print the sorted array
-    printf("Sorted array: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    printf("done");
+    // // print the sorted array
+    // printf("Sorted array: ");
+    // for (int i = 0; i < n; i++) {
+    //     printf("%d ", arr[i]);
+    // }
+    // printf("\n");
 
     return 0;
 }

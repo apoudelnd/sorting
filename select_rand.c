@@ -34,13 +34,15 @@ int main() {
 
     // sort the array using selection sort
     selectionSort(arr, n);
+    printf("done")
+    
 
     // print the sorted array
-    printf("Sorted array: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    // printf("Sorted array: ");
+    // for (int i = 0; i < n; i++) {
+    //     printf("%d ", arr[i]);
+    // }
+    // printf("\n");
 
     return 0;
 }
