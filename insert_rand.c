@@ -19,17 +19,17 @@ void insertionSort(int arr[], int n) {
 int main() {
     srand(time(0)); // initialize random seed
 
-    int n = 10000; // size of array
+    int n = 1500; // size of array
     int arr[n]; // declare array of size n
 
     // generate random array of integers
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 10000;
+        arr[i] = rand() % 1500;
     }
 
     // sort the array using insertion sort
     insertionSort(arr, n);
-    printf("done");
+    printf("done\n");
 
     // print the sorted array
     // printf("Sorted array: ");
