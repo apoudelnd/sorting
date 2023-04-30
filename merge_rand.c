@@ -43,7 +43,7 @@ int main() {
 
     // sort the array using quick sort
     quickSort(arr, 0, n - 1);
-    printf("done")
+    printf("done");
 
     // print the sorted array
     // printf("Sorted array: ");

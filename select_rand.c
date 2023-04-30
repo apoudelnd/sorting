@@ -34,7 +34,7 @@ int main() {
 
     // sort the array using selection sort
     selectionSort(arr, n);
-    printf("done")
+    printf("done");
     
 
     // print the sorted array
