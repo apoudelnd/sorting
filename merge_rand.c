@@ -2,55 +2,67 @@
 #include <stdlib.h>
 #include <time.h>
 
-void swap(int* a, int* b) {
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
-
-int partition(int arr[], int low, int high) {
-    int pivot = arr[high];
-    int i = (low - 1);
-
-    for (int j = low; j <= high - 1; j++) {
-        if (arr[j] < pivot) {
-            i++;
-            swap(&arr[i], &arr[j]);
+void merge(int arr[], int left[], int left_size, int right[], int right_size) {
+    int i = 0, j = 0, k = 0;
+    
+    while (i < left_size && j < right_size) {
+        if (left[i] <= right[j]) {
+            arr[k++] = left[i++];
+        } else {
+            arr[k++] = right[j++];
         }
     }
-    swap(&arr[i + 1], &arr[high]);
-    return (i + 1);
+    
+    while (i < left_size) {
+        arr[k++] = left[i++];
+    }
+    
+    while (j < right_size) {
+        arr[k++] = right[j++];
+    }
 }
 
-void quickSort(int arr[], int low, int high) {
-    if (low < high) {
-        int pi = partition(arr, low, high);
-        quickSort(arr, low, pi - 1);
-        quickSort(arr, pi + 1, high);
+void merge_sort(int arr[], int size) {
+    if (size < 2) {
+        return;
     }
+    
+    int mid = size / 2;
+    int left[mid], right[size - mid];
+    
+    for (int i = 0; i < mid; i++) {
+        left[i] = arr[i];
+    }
+    
+    for (int i = mid; i < size; i++) {
+        right[i - mid] = arr[i];
+    }
+    
+    merge_sort(left, mid);
+    merge_sort(right, size - mid);
+    merge(arr, left, mid, right, size - mid);
 }
 
 int main() {
-    srand(time(0)); // initialize random seed
-
-    int n = 1500; // size of array
-    int arr[n]; // declare array of size n
-
-    // generate random array of integers
-    for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 1500;
-    }
-
-    // sort the array using quick sort
-    quickSort(arr, 0, n - 1);
-    printf("done\n");
-
-    // print the sorted array
-    // printf("Sorted array: ");
-    // for (int i = 0; i < n; i++) {
+    // Seed the random number generator with the current time
+    srand(time(NULL));
+    
+    // Generate a random array of 10 integers
+    int arr[10];
+    
+    // printf("Unsorted array:\n");
+    // for (int i = 0; i < 10; i++) {
+    //     arr[i] = rand() % 100;
     //     printf("%d ", arr[i]);
     // }
-    // printf("\n");
-
+    
+    // Sort the array using merge sort
+    merge_sort(arr, 10);
+    
+    printf("\nSorted array\n");
+    // for (int i = 0; i < 10; i++) {
+    //     printf("%d ", arr[i]);
+    // }
+    
     return 0;
 }
