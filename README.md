@@ -23,4 +23,4 @@ If l2 configs not given in filename: l2 = 64Kb and associativity = 8 is the defa
 
 The default two level cache architecture as shown in gem5 documentation is used for this work. The archictecture configuration can be seen below:
 
-![ArchitectureConfiguration](arch_config.png)
+<img src="misc/arch_config.png" alt="Architecture Configuration" height ="400" width="400"/>
