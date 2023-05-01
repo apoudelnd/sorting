@@ -48,9 +48,9 @@ int main() {
     srand(time(NULL));
     
     // Generate a random array of 10 integers
-    int arr[25000];
+    int arr[500000];
     
-    merge_sort(arr, 25000);
+    merge_sort(arr, 500000);
     
     printf("\nSorted array\n");
     

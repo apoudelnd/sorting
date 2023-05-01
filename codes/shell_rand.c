@@ -17,12 +17,12 @@ void shellSort(int arr[], int n) {
 
 
 int main() {
-    int n = 25000;
+    int n = 1000000;
     int arr[n];
     
     srand(time(NULL));
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 25000; // generates random numbers between 0 and 99
+        arr[i] = rand() % 1000000; // generates random numbers between 0 and 99
     }
     
     shellSort(arr, n);
