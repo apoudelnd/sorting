@@ -18,3 +18,9 @@ The simulation run files are saved in the following format:
 ~~~bash
 If l2 configs not given in filename: l2 = 64Kb and associativity = 8 is the default setting. 
 ~~~
+
+# Simulated Architecture Configuration
+
+The default two level cache architecture as shown in gem5 documentation is used for this work. The archictecture configuration can be seen below:
+
+![ArchitectureConfiguration](arch_config.png)
