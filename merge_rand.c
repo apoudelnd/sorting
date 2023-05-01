@@ -48,21 +48,11 @@ int main() {
     srand(time(NULL));
     
     // Generate a random array of 10 integers
-    int arr[10];
+    int arr[100000];
     
-    // printf("Unsorted array:\n");
-    // for (int i = 0; i < 10; i++) {
-    //     arr[i] = rand() % 100;
-    //     printf("%d ", arr[i]);
-    // }
-    
-    // Sort the array using merge sort
-    merge_sort(arr, 10);
+    merge_sort(arr, 100000);
     
     printf("\nSorted array\n");
-    // for (int i = 0; i < 10; i++) {
-    //     printf("%d ", arr[i]);
-    // }
     
     return 0;
 }

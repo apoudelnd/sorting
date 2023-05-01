@@ -24,12 +24,12 @@ void bubbleSort(int arr[], int n) {
 int main() {
     srand(time(0)); // initialize random seed
 
-    int n = 1500; // size of array  
+    int n = 100000; // size of array  
     int arr[n]; // declare array of size n
 
     // generate random array of integers
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 1500;
+        arr[i] = rand() % 100000;
     }
 
     // sort the array using bubble sort
