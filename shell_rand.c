@@ -22,7 +22,7 @@ int main() {
     
     srand(time(NULL));
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 100; // generates random numbers between 0 and 99
+        arr[i] = rand() % 25000; // generates random numbers between 0 and 99
     }
     
     shellSort(arr, n);
